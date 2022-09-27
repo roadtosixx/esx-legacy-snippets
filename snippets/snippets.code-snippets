@@ -4,8 +4,7 @@
         "body": [
             "ESX.RegisterCommand({'clear', 'cls'}, 'user', function(xPlayer, args, showError)",
             "    xPlayer.triggerEvent('chat:clear')",
-            "end, false, {help = _U('command_clear')})",
-            "-- https://docs.esx-framework.org/legacy/Server/functions/registercommand"
+            "end, false, {help = _U('command_clear')})"
         ]
     },
     "PlayerLoaded": {
@@ -14,29 +13,25 @@
             "RegisterNetEvent('esx:playerLoaded')",
             "AddEventHandler('esx:playerLoaded', function(playerData)",
                 "$0",
-            "end)",
-            "-- https://docs.esx-framework.org/legacy/Client/events/playerloaded"
+            "end)"
         ]
     },
     "AdvancedNotification": {
         "prefix": "ESX:showAdvancedNotification event",
         "body": [
-            "TriggerClientEvent('esx:showAdvancedNotification', source, title, subject, msg, icon, iconType)",
-            "-- https://docs.esx-framework.org/legacy/Client/events/showadvancednotification"
+            "TriggerClientEvent('esx:showAdvancedNotification', source, title, subject, msg, icon, iconType)"
         ]
     },
     "showHelpNotification": {
         "prefix": "ESX:showHelpNotification event",
         "body": [
-            "TriggerClientEvent('esx:showHelpNotification', source, 'Hit ~INPUT_CONTEXT~ to do shit!')",
-            "-- https://docs.esx-framework.org/legacy/Client/events/showhelpnotification"
+            "TriggerClientEvent('esx:showHelpNotification', source, 'Hit ~INPUT_CONTEXT~ to do shit!')"
         ]
     },
     "showNotification": {
         "prefix": "ESX:showNotification event",
         "body": [
-            "TriggerClientEvent('esx:showNotification', source, 'Hello world!', type, time)",
-            "-- https://docs.esx-framework.org/legacy/Client/events/shownotification"
+            "TriggerClientEvent('esx:showNotification', source, 'Hello world!', type, time)"
         ]
     },
     "GetPlayerData": {
@@ -60,23 +55,20 @@
     "AdvancedNotification2": {
         "prefix": "ESX:showAdvancedNotification function",
         "body": [
-            "ESX.ShowAdvancedNotification(sender, subject, msg, textureDict, iconType, flash, saveToBrief, hudColorIndex)",
-            "-- https://docs.esx-framework.org/legacy/Client/functions/showadvancednotification"
+            "ESX.ShowAdvancedNotification(sender, subject, msg, textureDict, iconType, flash, saveToBrief, hudColorIndex)"
         ]
     },
     "ShowFloatingHelpNotification": {
         "prefix": "ESX.ShowFloatingHelpNotification",
         "body": [
             "local coords = GetEntityCoords(PlayerPedId())",
-            "ESX.ShowFloatingHelpNotification('Your Notification', vector3(coords.x, coords.y, coords.z))",
-            "-- https://docs.esx-framework.org/legacy/Client/functions/showfloatinghelpnotification"
+            "ESX.ShowFloatingHelpNotification('Your Notification', vector3(coords.x, coords.y, coords.z))"
         ]
     },
     "ShowHelpNotification2": {
         "prefix": "ESX:showHelpNotification function",
         "body": [
-            "ESX.ShowHelpNotification('Hit ~INPUT_CONTEXT~ to do shit!')",
-            "-- https://docs.esx-framework.org/legacy/Client/functions/showhelpnotification"
+            "ESX.ShowHelpNotification('Hit ~INPUT_CONTEXT~ to do shit!')"
         ]
     },
     "ShowInventory": {
@@ -88,18 +80,15 @@
     "ShowNotification2": {
         "prefix": "ESX.ShowNotification",
         "body": [
-            "ESX.ShowNotification(msg, time, type)",
-            "-- https://docs.esx-framework.org/legacy/Client/functions/shownotification"
+            "ESX.ShowNotification(msg, time, type)"
         ]
     },
     "TriggerServerCallback": {
         "prefix": "ESX.TriggerServerCallback",
         "body": [
-            "local data2 = 'data'",
-            "ESX.TriggerServerCallback('esx:bestframework', function(data)",
+            "ESX.TriggerServerCallback('', function(data)",
             "   print(data)",
-            "end, data2)",
-            "-- https://docs.esx-framework.org/legacy/Client/functions/triggerservercallback"
+            "end)"
         ]
     },
     "DeleteObj": {
@@ -213,7 +202,7 @@
     "SetVehicleProperties": {
         "prefix": "ESX.Game.SetVehicleProperties",
         "body": [
-            "ESX.Game.SetVehicleProperties(veh, props) -- information in documentation: https://docs.esx-framework.org/legacy/Client/functions/game/setvehicleproperties"
+            "ESX.Game.SetVehicleProperties(veh, props)"
         ]
     },
     "SpawnLocalObject": {
@@ -443,22 +432,19 @@
     "Math.GroupDigits": {
         "prefix": "ESX.Math.GroupDigits",
         "body": [
-            "ESX.Math.GroupDigits(val)",
-            "-- https://docs.esx-framework.org/legacy/Common/functions/groupdigits"
+            "ESX.Math.GroupDigits(val)"
         ]
     },
     "Math.round": {
         "prefix": "ESX.Math.Round",
         "body": [
-            "ESX.Math.Round(val, numDecimals)",
-            "-- https://docs.esx-framework.org/legacy/Common/functions/round"
+            "ESX.Math.Round(val, numDecimals)"
         ]
     },
     "Math.Trim": {
         "prefix": "ESX.Math.Trim",
         "body": [
-            "ESX.Math.Trim(val)",
-            "-- https://docs.esx-framework.org/legacy/Common/functions/trim"
+            "ESX.Math.Trim(val)"
         ]
     },
     "ClearTimeout": {
@@ -518,11 +504,9 @@
     "RegisterServerCallback": {
         "prefix": "ESX.RegisterServerCallback",
         "body": [
-            "local server = 'my server'",
-            "ESX.RegisterServerCallback('esx:bestframework', function(src, cb, param1, param2)",
-            "   cb(server)",
-            "end)",
-            "-- https://docs.esx-framework.org/legacy/Server/functions/registerservercallback"
+            "ESX.RegisterServerCallback('', function(source, cb)",
+            " ",
+            "end)"
         ]
     },
     "RegisterUsableItem": {
@@ -532,8 +516,7 @@
             "   local xPlayer = ESX.GetPlayerFromId(playerId)",
             "   xPlayer.removeInventoryItem('bread', 1)",
             "   xPlayer.showNotification('That was delicious.. right?')",
-            "end)",
-            "-- https://docs.esx-framework.org/legacy/Server/functions/registerusableitem"
+            "end)"
         ]
     },
     "SetTimeout": {
@@ -805,15 +788,13 @@
     "showHelpNotification xPlayer": {
         "prefix": "xPlayer.showHelpNotification",
         "body": [
-            "xPlayer.showHelpNotification(msg, thisFrame, beep, duration)",
-            "-- https://docs.esx-framework.org/legacy/Server/xplayer/showhelpnotification"
+            "xPlayer.showHelpNotification(msg, thisFrame, beep, duration)"
         ]
     },
     "showNotification xPlayer": {
         "prefix": "xPlayer.showNotification",
         "body": [
-            "xPlayer.showNotification(msg, flash, saveToBrief, hudColorIndex)",
-            "-- https://docs.esx-framework.org/legacy/Server/xplayer/shownotification"
+            "xPlayer.showNotification(msg, flash, saveToBrief, hudColorIndex)"
         ]
     },
     "triggerEvent xPlayer": {
@@ -866,6 +847,12 @@
     },
     "sharedObject": {
         "prefix": "ESX.SharedObject",
+        "body": [
+            "ESX = exports['es_extended']:getSharedObject()"
+        ]
+    },
+    "sharedObject2": {
+        "prefix": "getSharedObject",
         "body": [
             "ESX = exports['es_extended']:getSharedObject()"
         ]
