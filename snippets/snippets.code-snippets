@@ -456,7 +456,7 @@
     "CreatePickup": {
         "prefix": "ESX.CreatePickup",
         "body": [
-            "ESX.CreatePickup(type, name, count, label, playerId, components, tintIndex)"
+            "ESX.CreatePickup(type, name, count, label, source, components, tintIndex)"
         ]
     },
     "DoesJobExist": {
@@ -486,7 +486,7 @@
     "GetPlayerFromId": {
         "prefix": "ESX.GetPlayerFromId",
         "body": [
-            "ESX.GetPlayerFromId(PlayerId)"
+            "ESX.GetPlayerFromId(source)"
         ]
     },
     "GetPlayerFromIdentifier": {
@@ -512,8 +512,8 @@
     "RegisterUsableItem": {
         "prefix": "ESX.RegisterUsableItem",
         "body": [
-            "ESX.RegisterUsableItem('bread', function(playerId)",
-            "   local xPlayer = ESX.GetPlayerFromId(playerId)",
+            "ESX.RegisterUsableItem('bread', function(source)",
+            "   local xPlayer = ESX.GetPlayerFromId(source)",
             "   xPlayer.removeInventoryItem('bread', 1)",
             "   xPlayer.showNotification('That was delicious.. right?')",
             "end)"
@@ -536,7 +536,7 @@
     "UseItem": {
         "prefix": "ESX.UseItem",
         "body": [
-            "ESX.UseItem(PlayerId, itemName)"
+            "ESX.UseItem(source, itemName)"
         ]
     },
     "addAccountMoney": {
